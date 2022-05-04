@@ -1,20 +1,24 @@
 import React from "react";
 
+import {
+  Navbar,
+  NavList,
+  NavItem
+} from "../styles";
+
 // Active Astronauts, Management Astronauts, Former Astronauts
 
-const navCategories = ["Astronaut Homepage", "Search Astronauts", "Astronauts by Status", "Astronauts by Year"];
+const navCategories = ["Homepage", "Search", "Missions", "Status", "Year"];
 
 const Nav = () => {
   return (
-    <aside>
-      <ul>
+    <Navbar>
+      <NavList>
         {navCategories.map((category) => (
-          <div key={category}>
-            <li>{category}</li>
-          </div>
+          <NavItem key={category}>{category}</NavItem>
         ))}
-      </ul>
-    </aside>
+      </NavList>
+    </Navbar>
   );
 };
 

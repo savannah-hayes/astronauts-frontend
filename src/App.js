@@ -6,21 +6,23 @@ import Home from "./components/Home";
 import About from "./components/About";
 
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import {
-  AppContainer
-} from "./styles";
+// import {
+//   AppContainer
+// } from "./styles";
 
 const App = () => {
   return (
-    <AppContainer>
+    <>
       <Nav />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </BrowserRouter>
-    </AppContainer>
+      <main>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </BrowserRouter>
+      </main>
+    </>
   );
 };
 

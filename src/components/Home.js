@@ -2,6 +2,14 @@ import React, { useState, useEffect } from "react";
 
 import { astronautsApi } from "utils/urls";
 import Loading from "./Loading";
+import BirthDate from "partials/BirthDate";
+
+import {
+  CardWrapper,
+  Header,
+  Card,
+  SubHeader
+} from "../styles";
 
 const Home = () => {
   const [astronauts, setAstronauts] = useState([]);
@@ -23,17 +31,23 @@ const Home = () => {
 
   if (loading) {
     return <Loading />
-  }
+  };
 
   return (
-    <div>
-      {astronauts.map((astronaut) => (
-        <div key={astronaut.id}>
-          <h1>{astronaut.name}</h1>
-        </div>
-      ))}
-    </div>
-  )
-}
+    <>
+      <Header>All Astronauts</Header>
+      <CardWrapper>
+        {astronauts.map((astronaut) => (
+          <Card key={astronaut.id}>
+            <SubHeader>{astronaut.name}</SubHeader>
+            <BirthDate date={astronaut.birthDate} />
+            <p>Status: {astronaut.status}</p>
+            {astronaut.group && <p>Group: {astronaut.group}</p>}
+          </Card>
+        ))}
+      </CardWrapper>
+    </>
+  );
+};
 
-export default Home
+export default Home;
