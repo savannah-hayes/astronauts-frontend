@@ -12,14 +12,12 @@ export const Navbar = styled.header`
   background-color: #252931;
   display: flex;
   align-items: center;
-`;
-
-export const NavListWrapper = styled.div`
-  margin: 0 auto;
+  justify-content: space-between;
 `;
 
 export const NavList = styled.ul`
   display: flex;
+  margin-right: 15px;
 `;
 
 export const NavItem = styled.li`

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 import {
   Navbar,
-  NavListWrapper,
   NavList,
   NavItem
 } from "../styled-components/styles";
@@ -15,14 +14,12 @@ const navCategories = ["Homepage", "Search", "Missions", "Status", "Year"];
 const Nav = () => {
   return (
     <Navbar>
-      <Link to="/">Documentation</Link>
-      <NavListWrapper>
-        <NavList>
-          {navCategories.map((category) => (
-            <NavItem key={category}>{category}</NavItem>
-          ))}
-        </NavList>
-      </NavListWrapper>
+      <Link to="/" className="link">Documentation</Link>
+      <NavList>
+        {navCategories.map((category, index) => (
+          <NavItem key={category}>{category}</NavItem>
+        ))}
+      </NavList>
     </Navbar>
   );
 };
