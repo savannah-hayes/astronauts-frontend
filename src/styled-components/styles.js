@@ -11,7 +11,11 @@ export const Navbar = styled.header`
   color: white;
   background-color: #252931;
   display: flex;
-  justify-content: center;
+  align-items: center;
+`;
+
+export const NavListWrapper = styled.div`
+  margin: 0 auto;
 `;
 
 export const NavList = styled.ul`

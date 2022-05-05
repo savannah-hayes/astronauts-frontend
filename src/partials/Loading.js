@@ -4,7 +4,7 @@ import { Grid } from "react-loader-spinner";
 
 import {
   GridContainer
-} from "../styles";
+} from "../styled-components/styles";
 
 const Loading = () => {
   return (

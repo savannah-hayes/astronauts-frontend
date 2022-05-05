@@ -11,7 +11,7 @@ import {
   Header,
   Card,
   SubHeader
-} from "../styles";
+} from "../styled-components/styles";
 
 const About = () => {
   const [astronauts, setAstronauts] = useState([]);

@@ -4,6 +4,23 @@ export const Container = styled.main`
   padding: 10px 20px 50px 10px;
 `;
 
+export const Header = styled.h1`
+  text-align: center;
+  color: #14418c;
+`;
+
+export const SubHeader = styled.h2`
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 50px;
+`;
+
+export const Example = styled.p`
+  margin-bottom: 30px;
+
+  margin-top: ${props => props.top ? "35px" : "0px"};
+`;
+
 export const Table = styled.table`
   text-align: center;
   border-collapse: collapse;
@@ -16,7 +33,6 @@ export const Table = styled.table`
 
 export const List = styled.tr`
   padding: 8px;
-
 `;
 
 export const Item = styled.td`

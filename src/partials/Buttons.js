@@ -3,7 +3,7 @@ import React from "react";
 import {
   ButtonContainer,
   Button
-} from "../styles";
+} from "../styled-components/styles";
 
 const Buttons = ({ page, setPage }) => {
   return (

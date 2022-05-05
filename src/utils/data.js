@@ -65,7 +65,7 @@ export const renderTableData = (parameters) => {
     const { id, query, options, description } = parameter;
     
     return (
-      <tbody>
+      <tbody key={id}>
         <List>
           <Item>{id}</Item>
           <Item>{query}</Item>
