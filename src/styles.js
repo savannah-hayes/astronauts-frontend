@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
-// export const AppContainer = styled.div`
-//   display: flex;
-// `;
+export const GridContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+`;
 
 export const Navbar = styled.header`
   padding: 20px;
@@ -18,9 +20,12 @@ export const NavList = styled.ul`
 
 export const NavItem = styled.li`
   margin-right: 5px;
-  padding: 12px;
+  padding: 10px 15px;
   cursor: pointer;
-  border-right: 1px solid grey;
+
+  &:not(:last-child) {
+    border-right: 1px solid grey;
+  }
 `;
 
 export const CardWrapper = styled.div`
@@ -45,4 +50,23 @@ export const Card = styled.div`
 
 export const SubHeader = styled.h2`
   margin-top: 0;
+`;
+
+export const ButtonContainer = styled.div`
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+`;
+
+export const Button = styled.button`
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+
+  &:first-child {
+    margin-right: 30px;
+  };
 `;
