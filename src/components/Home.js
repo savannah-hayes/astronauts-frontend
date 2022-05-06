@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import { astronautsApi } from "utils/urls";
-import Nav from "components/Nav";
+import Navbar from "components/Navbar";
 import Loading from "partials/Loading";
 import BirthDate from "partials/BirthDate";
 import Buttons from "partials/Buttons";
@@ -13,7 +13,7 @@ import {
   SubHeader
 } from "../styled-components/styles";
 
-const About = () => {
+const Home = () => {
   const [astronauts, setAstronauts] = useState([]);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
@@ -38,7 +38,7 @@ const About = () => {
 
   return (
     <>
-      <Nav />
+      <Navbar />
       <main>
         <Header>All Astronauts</Header>
         <CardWrapper>
@@ -57,4 +57,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Home;

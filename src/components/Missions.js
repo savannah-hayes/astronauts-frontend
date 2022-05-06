@@ -2,7 +2,7 @@ import React from "react";
 
 import Navbar from "components/Navbar";
 
-const Search = () => {
+const Missions = () => {
   return (
     <div>
       <Navbar />
@@ -10,4 +10,4 @@ const Search = () => {
   )
 }
 
-export default Search
+export default Missions

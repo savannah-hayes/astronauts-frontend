@@ -6,28 +6,17 @@ export const GridContainer = styled.div`
   margin-top: 100px;
 `;
 
-export const Navbar = styled.header`
+export const NavContainer = styled.header`
   padding: 20px;
-  color: white;
   background-color: #252931;
   display: flex;
   align-items: center;
   justify-content: space-between;
 `;
 
-export const NavList = styled.ul`
+export const NavWrapper = styled.div`
   display: flex;
   margin-right: 15px;
-`;
-
-export const NavItem = styled.li`
-  margin-right: 5px;
-  padding: 10px 15px;
-  cursor: pointer;
-
-  &:not(:last-child) {
-    border-right: 1px solid grey;
-  }
 `;
 
 export const CardWrapper = styled.div`

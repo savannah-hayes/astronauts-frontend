@@ -2,12 +2,12 @@ import React from "react";
 
 import Navbar from "components/Navbar";
 
-const Search = () => {
+const Status = () => {
   return (
     <div>
       <Navbar />
     </div>
-  )
-}
+  );
+};
 
-export default Search
+export default Status;

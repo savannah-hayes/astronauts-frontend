@@ -36,7 +36,7 @@ const Home = () => {
         filtered out based on the astronauts missions, status, and year. Also, a search form to search for a
         specific astronaut by name.
       </p>
-      <Link to="/Astronauts">Frontend Project</Link>
+      <Link to="/Home">Frontend Project</Link>
       <SubHeader>Backend Documentation</SubHeader>
       <h3>BASE URL</h3>
       <p>https://express-api-technigo.herokuapp.com/</p>

@@ -19,8 +19,29 @@ ol, ul {
 .link {
   background-color: white;
   border: 1px solid white;
-  color: #252931;
+  color: #db1600;
   text-decoration: none;
   padding: 8px;
   border-radius: 15px;
+}
+
+.linkStyle {
+  margin-right: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+
+.linkStyle:not(:last-child) {
+  border-right: 1px solid grey;
+}
+
+.linkStyle:hover {
+  text-decoration: underline;
+}
+
+.active {
+  font-weight: bold;
+  text-decoration: underline;
 }
