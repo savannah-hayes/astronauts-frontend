@@ -75,6 +75,7 @@ const Search = () => {
             id="name"
             type="text"
             value={astronautName}
+            placeholder="Sally K. Ride"
             onChange={(event) => {
               setAstronautName(event.target.value)
             }}>

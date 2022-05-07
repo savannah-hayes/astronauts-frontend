@@ -1,18 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import {
-  renderTableData,
-  queryParametersOne,
-  queryParametersTwo
-} from "../partials/RenderTableData";
+import { renderParameterData } from "../partials/RenderTableData";
+import queryParametersOne from "../data/query-parameters-one.json";
+import queryParametersTwo from "../data/query-parameters-two.json";
 
-import { 
+import {
   Container,
   Example,
   Header,
-  SubHeader, 
-  Table 
+  SubHeader,
+  ParameterTable
 } from "../styled-components/HomeStyling";
 
 const Home = () => {
@@ -24,11 +22,11 @@ const Home = () => {
         astronauts data, or a single astronaut in JSON format. Lastly, I deployed the backened
         to Heroku.
       </p>
-      <a 
+      <a
         target="_blank"
         rel="noopener noreferrer"
         href="https://express-api-technigo.herokuapp.com/">
-          Backend API link
+        Backend API link
       </a>
       <p>After building the data needed then I implemented the Frontend to access the data from the backend
         that I built. The goal of the frontend is to display a list of all Nasa Astronauts in cards including,
@@ -52,10 +50,18 @@ const Home = () => {
       <p>Examples of API calls</p>
       <Example>/api/astronauts?status=&#123;status&#125;&mission=&#123;mission&#125;&gender=
         &#123;gender&#125;&major=&#123;major&#125;&graduateMajor=&#123;graduateMajor&#125;</Example>
-      <Table>{renderTableData(queryParametersOne)}</Table>
+      <ParameterTable>
+        <tbody>
+          {renderParameterData(queryParametersOne)}
+        </tbody>
+      </ParameterTable>
       <Example top>/api/year/:year?gender=&#123;gender&#125;&group=&#123;group&#125;&spaceFlights=&#123;spaceFlights&#125;
         &spaceHours=&#123;spaceHours&#125;&spaceWalks=&#123;spaceWalks&#125;&walksHours=&#123;walksHours&#125;</Example>
-      <Table>{renderTableData(queryParametersTwo)}</Table>
+      <ParameterTable>
+        <tbody>
+          {renderParameterData(queryParametersTwo)}
+        </tbody>
+      </ParameterTable>
     </Container>
   );
 };

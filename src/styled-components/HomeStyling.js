@@ -21,7 +21,7 @@ export const Example = styled.p`
   margin-top: ${props => props.top ? "35px" : "0px"};
 `;
 
-export const Table = styled.table`
+export const ParameterTable = styled.table`
   text-align: center;
   border-collapse: collapse;
   width: 100%;
@@ -31,11 +31,11 @@ export const Table = styled.table`
   };
 `;
 
-export const List = styled.tr`
+export const ParameterTr = styled.tr`
   padding: 8px;
 `;
 
-export const Item = styled.td`
+export const ParameterTd = styled.td`
   border: 2px solid #ddd;
   padding: 8px;
   
