@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Navbar from "components/Navbar";
 import FormattedDate from "partials/FormattedDate";
 
-import { astronautByName } from "utils/urls";
+import { astronautNameApi } from "utils/urls";
 
 import {
   Form,
@@ -22,7 +22,7 @@ const Search = () => {
   const [astronautName, setAstronautName] = useState("");
   const [errorMessage, setErrorMessage] = useState({});
 
-  const noMissionData = 
+  const noSpaceData = 
     !astronaut?.missions && 
     !astronaut?.deathMission &&
     !astronaut?.spaceFlights > 0 && 
@@ -35,7 +35,7 @@ const Search = () => {
 
     const fetchData = async () => {
       try {
-        const response = await fetch(astronautByName(astronautName));
+        const response = await fetch(astronautNameApi(astronautName));
         const json = await response.json();
         setAstronaut(json.astronaut);
 
@@ -93,10 +93,10 @@ const Search = () => {
           <CardWrapper>
             <Card>
               <SubHeader>{astronaut?.name}</SubHeader>
-              <p>Gender: {astronaut.gender}</p>
+              <p>Gender: {astronaut?.gender}</p>
               <FormattedDate date={astronaut?.birthDate} title="Born: " />
               <FormattedDate date={astronaut?.deathDate} title="Died: " />
-              <p>Hometown: {astronaut?.birthPlace}</p>
+              {astronaut?.birthPlace && <p>Hometown: {astronaut?.birthPlace}</p>}
               {astronaut?.militaryRank && <p>Military Rank: {astronaut?.militaryRank}</p>}
               {astronaut?.militaryBranch && <p>Military Branch: {astronaut?.militaryBranch}</p>}
             </Card>
@@ -104,8 +104,8 @@ const Search = () => {
            <CardWrapper>
             <Card>
               <SubHeader>Education</SubHeader>
-              <p>Alma Mater: {astronaut?.almaMater}</p>
-              <p>Undergraduate Major: {astronaut?.underGraduateMajor}</p>
+              {astronaut?.almaMater && <p>Alma Mater: {astronaut?.almaMater}</p>}
+              {astronaut?.underGraduateMajor&& <p>Undergraduate Major: {astronaut?.underGraduateMajor}</p>}
               {astronaut?.graduateMajor && <p>Graduate Major: {astronaut?.graduateMajor}</p>}
             </Card>
           </CardWrapper>
@@ -118,7 +118,7 @@ const Search = () => {
               {astronaut?.spaceFlight_hr > 0 && <p>Space Flight Hours: {astronaut?.spaceFlight_hr}</p>}
               {astronaut?.spaceWalks > 0 && <p>Space Walks: {astronaut?.spaceWalks}</p>}
               {astronaut?.spaceWalks_hr > 0 && <p>Space Walk Hours: {astronaut?.spaceWalks_hr}</p>}
-              {noMissionData && 
+              {noSpaceData && 
                 <p>No Space Data for {astronaut?.name}</p>
               }
             </Card>
@@ -126,8 +126,7 @@ const Search = () => {
         </CardContainer>
       }
     </div>
-  )
+  );
+};
 
-}
-
-export default Search
+export default Search;

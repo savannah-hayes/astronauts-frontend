@@ -5,7 +5,7 @@ import {
   renderTableData,
   queryParametersOne,
   queryParametersTwo
-} from "../utils/data"
+} from "../partials/RenderTableData";
 
 import { 
   Container,
@@ -50,14 +50,14 @@ const Home = () => {
       <p>This endpoint returns a JSON object "year" containing all filtered NASA astronauts from a specific year.</p>
       <h3>Query Parameters</h3>
       <p>Examples of API calls</p>
-      <Example>/api/astronauts?name=&#123;name&#125;&status=&#123;status&#125;&mission=&#123;mission&#125;&gender=
+      <Example>/api/astronauts?status=&#123;status&#125;&mission=&#123;mission&#125;&gender=
         &#123;gender&#125;&major=&#123;major&#125;&graduateMajor=&#123;graduateMajor&#125;</Example>
       <Table>{renderTableData(queryParametersOne)}</Table>
       <Example top>/api/year/:year?gender=&#123;gender&#125;&group=&#123;group&#125;&spaceFlights=&#123;spaceFlights&#125;
         &spaceHours=&#123;spaceHours&#125;&spaceWalks=&#123;spaceWalks&#125;&walksHours=&#123;walksHours&#125;</Example>
       <Table>{renderTableData(queryParametersTwo)}</Table>
     </Container>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
