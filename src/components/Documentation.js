@@ -36,7 +36,7 @@ const Home = () => {
         filtered out based on the astronauts missions, status, and year. Also, a search form to search for a
         specific astronaut by name.
       </p>
-      <Link to="/Home">Frontend Project</Link>
+      <Link to="/Astronauts">Frontend Project</Link>
       <SubHeader>Backend Documentation</SubHeader>
       <h3>BASE URL</h3>
       <p>https://express-api-technigo.herokuapp.com/</p>
@@ -44,8 +44,8 @@ const Home = () => {
       <h3>ENDPOINTS</h3>
       <p><strong>GET</strong> /api/astronauts</p>
       <p>This endpoint returns a JSON object "astronauts" containing all NASA astronauts and information about them.</p>
-      <p><strong>GET</strong> /api/astronauts:id</p>
-      <p>This endpoint returns information about a single astronaut.</p>
+      <p><strong>GET</strong> /api/astronauts:name</p>
+      <p>This endpoint returns information about a single astronaut by name.</p>
       <p><strong>GET</strong> /api/year/:year</p>
       <p>This endpoint returns a JSON object "year" containing all filtered NASA astronauts from a specific year.</p>
       <h3>Query Parameters</h3>

@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Documentation from "./components/Documentation";
-import Home from "./components/Home";
+import Astronauts from "./components/Astronauts";
 import Search from "components/Search";
 import Missions from "components/Missions";
 import Status from "components/Status";
@@ -15,7 +15,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Documentation />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/astronauts" element={<Astronauts />} />
         <Route path="/search" element={<Search />} />
         <Route path="/missions" element={<Missions />} />
         <Route path="/status" element={<Status />} />

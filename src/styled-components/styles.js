@@ -37,6 +37,8 @@ export const Card = styled.div`
   border: 1px solid black;
   padding: 15px;
   width: 20%;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 `;
 
 export const SubHeader = styled.h2`

@@ -6,7 +6,7 @@ import {
   NavWrapper
 } from "../styled-components/styles";
 
-const navTitles = ["Home", "Search", "Missions", "Status", "Year"];
+const navTitles = ["Astronauts", "Search", "Missions", "Status", "Year"];
 
 const Navbar = () => {
   return (

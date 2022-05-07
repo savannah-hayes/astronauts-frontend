@@ -33,9 +33,9 @@ const DateStamp = (dates) => {
     }
   };
 
-  return `Born: ${currentMonth} ${date}${daysEndingString()}, ${year}`;
+  return `${currentMonth} ${date}${daysEndingString()}, ${year}`;
 };
 
-const BirthDate = ({ date }) => <p>{DateStamp(date)}</p>;
+const FormattedDate = ({ date, title }) => {return date && <p>{title}{DateStamp(date)}</p>};
 
-export default BirthDate;
+export default FormattedDate;

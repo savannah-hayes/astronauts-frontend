@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 
-import { astronautsApi } from "utils/urls";
 import Navbar from "components/Navbar";
 import Loading from "partials/Loading";
-import BirthDate from "partials/BirthDate";
+import FormattedDate from "partials/FormattedDate";
 import Buttons from "partials/Buttons";
+
+import { astronautsApi } from "utils/urls";
 
 import {
   CardWrapper,
@@ -13,7 +14,7 @@ import {
   SubHeader
 } from "../styled-components/styles";
 
-const Home = () => {
+const Astronauts = () => {
   const [astronauts, setAstronauts] = useState([]);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
@@ -43,11 +44,11 @@ const Home = () => {
         <Header>All Astronauts</Header>
         <CardWrapper>
           {astronauts.map((astronaut) => (
-            <Card key={astronaut.name}>
-              <SubHeader>{astronaut.name}</SubHeader>
-              <BirthDate date={astronaut.birthDate} />
-              <p>Status: {astronaut.status}</p>
-              {astronaut.group && <p>Group: {astronaut.group}</p>}
+            <Card key={astronaut?.name}>
+              <SubHeader>{astronaut?.name}</SubHeader>
+              <FormattedDate date={astronaut?.birthDate} title="Born: " />
+              {astronaut?.group && <p>Astronaut Group: {astronaut?.group}</p>}
+              {astronaut?.status && <p>Status: {astronaut?.status}</p>}
             </Card>
           ))}
         </CardWrapper>
@@ -57,4 +58,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Astronauts;
