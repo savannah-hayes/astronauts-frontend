@@ -42,8 +42,12 @@ const Home = () => {
       <h3>ENDPOINTS</h3>
       <p><strong>GET</strong> /api/astronauts</p>
       <p>This endpoint returns a JSON object "astronauts" containing all NASA astronauts and information about them.</p>
-      <p><strong>GET</strong> /api/astronauts:name</p>
+      <p><strong>GET</strong> /api/astronauts/:name</p>
       <p>This endpoint returns information about a single astronaut by name.</p>
+      <p><strong>GET</strong> /api/missions</p>
+      <p>This endpoint returns a JSON object "missions" containing launches and orbital flights data.</p>
+      <p><strong>GET</strong> /api/missions/:name</p>
+      <p>This endpoint returns information about a single mission by name.</p>
       <p><strong>GET</strong> /api/year/:year</p>
       <p>This endpoint returns a JSON object "year" containing all filtered NASA astronauts from a specific year.</p>
       <h3>Query Parameters</h3>
@@ -55,11 +59,18 @@ const Home = () => {
           {renderParameterData(queryParametersOne)}
         </tbody>
       </ParameterTable>
+      <Example top>/api/missions?shuttle=&#123;shuttle&#125;&crew=&#123;crew&#125;&launch_pad=&#123;launch_pad&#125;
+        &landing_site=&#123;landing_site&#125;</Example>
+      <ParameterTable>
+        <tbody>
+          {renderParameterData(queryParametersTwo)}
+        </tbody>
+      </ParameterTable>
       <Example top>/api/year/:year?gender=&#123;gender&#125;&group=&#123;group&#125;&spaceFlights=&#123;spaceFlights&#125;
         &spaceHours=&#123;spaceHours&#125;&spaceWalks=&#123;spaceWalks&#125;&walksHours=&#123;walksHours&#125;</Example>
       <ParameterTable>
         <tbody>
-          {renderParameterData(queryParametersTwo)}
+          {renderParameterData(queryParametersThree)}
         </tbody>
       </ParameterTable>
     </Container>

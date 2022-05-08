@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1, 
+    "query": "status", 
+    "options": "optional",
+    "description": "Returns a filtered list of astronauts that includes their status."
+  },
+  {
+    "id": 2, 
+    "query": "mission", 
+    "options": "optional",
+    "description": "Returns a filtered list of astronauts based on the missions they have been on."
+  },
+  {
+    "id": 3, 
+    "query": "gender", 
+    "options": "optional",
+    "description": "Returns a filtered list of astronauts based on female or male astronauts."
+  },
+  {
+    "id": 4, 
+    "query": "major", 
+    "options": "optional",
+    "description": "Returns a filtered list of astronauts based on the undergraduate major they studied."
+  },
+  {
+    "id": 5, 
+    "query": "graduateMajor", 
+    "options": "optional",
+    "description": "Returns a filtered list of astronauts based on the graduate major they studied."
+  }
+]

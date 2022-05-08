@@ -1,37 +1,26 @@
 [
   {
     "id": 1, 
-    "query": "gender", 
+    "query": "shuttle", 
     "options": "optional",
-    "description": "Returns a filtered list of astronauts based on female or male astronauts."
+    "description": "Returns a filtered list of missions that includes the shuttle name."
   },
   {
     "id": 2, 
-    "query": "group", 
+    "query": "crew", 
     "options": "optional",
-    "description": "Returns a filtered list of astronauts based on their astronaut group."
+    "description": "Returns a filtered list of missions based on the number of crew members"
   },
   {
-    "id": 3, "query": "spaceFlights", "options": "optional",
-    "description": "Returns a filtered list of astronauts based on the number of space flights they have been on."
+    "id": 3, 
+    "query": "launch_pad", 
+    "options": "optional",
+    "description": "Returns a filtered list of missions based on the launch pad location."
   },
   {
     "id": 4, 
-    "query": "spaceHours", 
+    "query": "landing_site", 
     "options": "optional",
-    "description": "Returns a filtered list of astronauts based on the number of hours during space flight they have been on."
-  },
-
-  {
-    "id": 5, 
-    "query": "spaceWalks", 
-    "options": "optional",
-    "description": "Returns a filtered list of astronauts based on the number of space walks they have been on."
-  },
-  {
-    "id": 6, 
-    "query": "walksHours", 
-    "options": "optional",
-    "description": "Returns a filtered list of astronauts based on the number of hours during space walks they have been on."
+    "description": "Returns a filtered list of missions based on the landing site location."
   }
 ]
