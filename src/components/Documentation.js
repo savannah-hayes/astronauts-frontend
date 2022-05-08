@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { renderParameterData } from "../partials/RenderTableData";
 import queryParametersOne from "../data/query-parameters-one.json";
 import queryParametersTwo from "../data/query-parameters-two.json";
+import queryParametersThree from "../data/query-parameters-three.json";
 
 import {
   Container,

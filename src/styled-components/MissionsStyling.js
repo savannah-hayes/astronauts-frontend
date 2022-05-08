@@ -47,3 +47,19 @@ export const MissionsTd = styled.td`
     width: 25%
   }
 `;
+
+export const MissionHeader = styled.h2`
+  text-align: center;
+  color: #14418c;
+  font-weight: 700;
+  font-size: 32px;
+  margin: 30px 0;
+`;
+
+export const CardContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 50px;
+`;

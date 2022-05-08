@@ -1,7 +1,6 @@
 import React from "react";
 
 import { ParameterTr, ParameterTd } from "../styled-components/HomeStyling";
-import { MissionsTr, MissionsTd } from "../styled-components/MissionsStyling";
 
 export const renderParameterData = (parameters) => {
   return parameters.map((parameter) => {
@@ -18,18 +17,18 @@ export const renderParameterData = (parameters) => {
   });
 };
 
-export const renderMissionsData = (missionsData) => {
-  return missionsData.map((data) => {
-    const { mission, shuttle, crew, duration, launch_pad } = data;
+// export const renderMissionsData = (missionsData) => {
+//   return missionsData.map((data) => {
+//     const { mission, shuttle, crew, duration, launch_pad } = data;
 
-    return (
-      <MissionsTr key={mission}>
-        <MissionsTd>{mission}</MissionsTd>
-        <MissionsTd>{shuttle}</MissionsTd>
-        <MissionsTd>{crew}</MissionsTd>
-        <MissionsTd>{duration}</MissionsTd>
-        <MissionsTd>{launch_pad}</MissionsTd>
-      </MissionsTr>
-    );
-  });
-};
+//     return (
+//       <MissionsTr key={mission}>
+//         <MissionsTd>{mission}</MissionsTd>
+//         <MissionsTd>{shuttle}</MissionsTd>
+//         <MissionsTd>{crew}</MissionsTd>
+//         <MissionsTd>{duration}</MissionsTd>
+//         <MissionsTd>{launch_pad}</MissionsTd>
+//       </MissionsTr>
+//     );
+//   });
+// };

@@ -32,7 +32,6 @@ export const CardWrapper = styled.div`
   height: 100%;
 `;
 
-
 export const Header = styled.h1`
   text-align: center;
   color: #14418c;
