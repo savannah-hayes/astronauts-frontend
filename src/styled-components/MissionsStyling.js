@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const Button = styled.button`
+  margin: 15px 0 0 15px;
+`;
+
 export const MissionsTable = styled.table`
   text-align: center;
   border-collapse: collapse;

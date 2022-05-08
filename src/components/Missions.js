@@ -7,6 +7,7 @@ import FormattedDate from "partials/FormattedDate";
 import { missionsApi, astronautsByMissionApi } from "utils/urls";
 
 import {
+  Button,
   Header,
   MissionsTable,
   MissionsTr,
@@ -67,10 +68,11 @@ const Missions = () => {
   if (missionClicked) {
     return (
       <>
+        <Button onClick={() => setMissionClicked(false)}>&#171; &nbsp; Back to Missions</Button>
         <MissionHeader>{missionName}</MissionHeader>
         <CardWrapper>
           {specificMissions.map((mission) => (
-            <Card key={mission?.name}>
+            <Card key={mission?.name} wide>
               <SubHeader>{mission?.name}</SubHeader>
               <p>Gender: {mission?.gender}</p>
               <FormattedDate date={mission?.birthDate} title="Born: " />

@@ -67,7 +67,7 @@ const Search = () => {
   return (
     <div>
       <Navbar />
-      <Header>Astronaut by Name</Header>
+      <Header>Specific Astronaut</Header>
       <Form onSubmit={handleNameSubmit}>
         <label htmlFor="name">Search Astronaut by Name</label>
         <InputWrapper>

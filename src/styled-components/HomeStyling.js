@@ -15,6 +15,14 @@ export const SubHeader = styled.h2`
   margin-top: 50px;
 `;
 
+export const SubSubHeader = styled.h3`
+   margin-top: 30px;
+`;
+
+export const Paragraph = styled.p`
+  margin-top: 30px;
+`;
+
 export const Example = styled.p`
   margin-bottom: 30px;
 

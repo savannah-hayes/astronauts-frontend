@@ -11,6 +11,8 @@ import {
   Example,
   Header,
   SubHeader,
+  SubSubHeader,
+  Paragraph,
   ParameterTable
 } from "../styled-components/HomeStyling";
 
@@ -37,21 +39,23 @@ const Home = () => {
       </p>
       <Link to="/Astronauts">Frontend Project</Link>
       <SubHeader>Backend Documentation</SubHeader>
-      <h3>BASE URL</h3>
+      <SubSubHeader>BASE URL</SubSubHeader>
       <p>https://express-api-technigo.herokuapp.com/</p>
       <p>The base URL returns a list of all available endpoints.</p>
-      <h3>ENDPOINTS</h3>
+      <SubSubHeader>ENDPOINTS</SubSubHeader>
       <p><strong>GET</strong> /api/astronauts</p>
       <p>This endpoint returns a JSON object "astronauts" containing all NASA astronauts and information about them.</p>
       <p><strong>GET</strong> /api/astronauts/:name</p>
       <p>This endpoint returns information about a single astronaut by name.</p>
-      <p><strong>GET</strong> /api/missions</p>
+      <Paragraph><strong>GET</strong> /api/missions</Paragraph>
       <p>This endpoint returns a JSON object "missions" containing launches and orbital flights data.</p>
       <p><strong>GET</strong> /api/missions/:name</p>
       <p>This endpoint returns information about a single mission by name.</p>
-      <p><strong>GET</strong> /api/year/:year</p>
+      <Paragraph><strong>GET</strong> /api/years</Paragraph>
+      <p>This endpoint returns a sorted array that lists all astronauts years.</p>
+      <p><strong>GET</strong> /api/years/:year</p>
       <p>This endpoint returns a JSON object "year" containing all filtered NASA astronauts from a specific year.</p>
-      <h3>Query Parameters</h3>
+      <SubSubHeader>Query Parameters</SubSubHeader>
       <p>Examples of API calls</p>
       <Example>/api/astronauts?status=&#123;status&#125;&mission=&#123;mission&#125;&gender=
         &#123;gender&#125;&major=&#123;major&#125;&graduateMajor=&#123;graduateMajor&#125;</Example>
