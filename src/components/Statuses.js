@@ -21,7 +21,7 @@ import {
 
 const statusTitles = ["Active", "Retired", "Deceased"];
 
-const Status = () => {
+const Statuses = () => {
   const [statuses, setStatuses] = useState([]);
   const [statusTitle, setStatusTitle] = useState("");
   const [loading, setLoading] = useState(false);
@@ -84,4 +84,4 @@ const Status = () => {
   );
 };
 
-export default Status;
+export default Statuses;

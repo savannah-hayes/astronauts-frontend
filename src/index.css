@@ -45,3 +45,15 @@ ol, ul {
   font-weight: bold;
   text-decoration: underline;
 }
+
+@media (max-width: 767px){
+  .link {
+    position: absolute;
+    right: 25px;
+    top: 24px;
+  }
+
+  .linkStyle:not(:last-child) {
+    border-right: none;
+  }
+}

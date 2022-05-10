@@ -5,8 +5,8 @@ import Documentation from "./components/Documentation";
 import Astronauts from "./components/Astronauts";
 import Search from "components/Search";
 import Missions from "components/Missions";
-import Status from "components/Status";
-import Year from "components/Year";
+import Statuses from "components/Statuses";
+import Years from "components/Years";
 
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
@@ -18,8 +18,8 @@ const App = () => {
         <Route path="/astronauts" element={<Astronauts />} />
         <Route path="/search" element={<Search />} />
         <Route path="/missions" element={<Missions />} />
-        <Route path="/status" element={<Status />} />
-        <Route path="/year" element={<Year />} />
+        <Route path="/statuses" element={<Statuses />} />
+        <Route path="/years" element={<Years />} />
       </Routes>
     </BrowserRouter>
   );
